@@ -16,7 +16,10 @@ btnElement.addEventListener("click", async function(){
         animeContainerElement.style.display = "block";
         animeImageElement.src = data.url;
         animeNameElement.innerText = data.artist;
-    }catch (error) {
-    console.log(error);
+        } catch (error) {
+        console.log(error);
+        btnEl.disabled = false;
+        btnElement.innerText = "Get Anime";
+        animeNameElement.innerText = "An error happend, try again later or contact the developer if the problem occured";
     }
 });
